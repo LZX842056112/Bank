@@ -1,4 +1,4 @@
-package com.atguigu.javase.banking;
+package com.atguigu.javase.banking1;
 //帐户金额信息
 public class Account {
 	
@@ -27,7 +27,7 @@ public class Account {
 	//从当前余额中减去金额。
 	public boolean withdraw(double amt) {
 		if (amt >= 0 && amt <= balance) {
-			balance -= amt;
+			this.balance -= amt;
 			System.out.println("取出金额为：" + amt);
 			return true;
 		} else {

@@ -1,4 +1,4 @@
-package com.atguigu.javase.banking;
+package com.atguigu.javase.banking1;
 //用户信息
 public class Customer {
 	
@@ -9,6 +9,17 @@ public class Customer {
 	public Customer(String f, String l) {
 		this.firstName = f;
 		this.lastName = l;
+	}
+	
+	public void addAccount(Account account) {
+		
+	}
+	
+	public void getAccount(int index) {
+	}
+	
+	public void getNumOfAccounts() {
+		
 	}
 
 	public Account getAccount() {

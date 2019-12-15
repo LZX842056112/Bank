@@ -1,4 +1,4 @@
-package com.atguigu.javase.banking;
+package com.atguigu.javase.banking1;
 
 public class Bank {
 	
@@ -16,8 +16,7 @@ public class Bank {
 
 	//它返回与给出的index参数相关的客户。
 	public Customer getCustomer(int index) {
-		if (index > 0 && index <= numberOfCustomer) return customers[index];
-		return null;
+			return customers[index];
 	}
 
 	//返回 numberofCustomers 属性值。
