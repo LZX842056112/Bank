@@ -1,12 +1,15 @@
-package com.atguigu.javase.banking3;
+package com.atguigu.javase.bankingend;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Bank {
 	
-	private Customer[] customers;
-	private int numberOfCustomer;//跟踪下一个 customers 数组索引
+	private List<Customer> customers;
 	
 	private Bank() {
-		customers = new Customer[5];
+		customers= new ArrayList<Customer>();
 	}
 	
 	private static Bank instance = new Bank();
@@ -17,16 +20,20 @@ public class Bank {
 	
 	public void addCustomer(String f, String l) {
 			Customer customer = new Customer(f, l);
-			customers[numberOfCustomer++] =customer;
+			customers.add(customer);
 	}
 
 	//它返回与给出的index参数相关的客户。
 	public Customer getCustomer(int index) {
-			return customers[index];
+			return customers.get(index);
 	}
 
-	//返回 numberofCustomers 属性值。
+	//返回长度
 	public int getNumberOfCustomer() {
-		return numberOfCustomer;
+		return customers.size();
+	}
+	
+	public Iterator<Customer> getCustomers() {
+		return customers.iterator();
 	}
 }
